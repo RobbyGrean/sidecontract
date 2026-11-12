@@ -58,3 +58,4 @@ The WIP branch contains a Procurement TOR change:
 - 2026-11-12: Scanned all 13 HTML/JS/CSS/SVG files on `main`; found three sidecontract repository URL occurrences and no Jangmao70/Khet70 or other owner-repository links.
 - 2026-11-12: Compared all reachable commits between sidecontract and the legacy Jangmao70 repository; found no shared commit hashes. sidecontract has two internal root commits (repository initializer and 1.0.0 baseline); public history was left unchanged.
 - 2026-11-12: A path-only inventory of the standalone WIP worktree found 31 pending document paths (28 deletions, 3 untracked: 30 DOCX and 1 PDF); no source/config changes. The files remain local while document work is paused; their contents were not inspected.
+- 2026-11-12: Compared GitHub HEAD trees for main and WIP: all 17 differing entries are under Template; no .cs/.ps1/.iss/Config files differ, and PROGRESS.md has identical blobs.

@@ -6,10 +6,11 @@ Repository: https://github.com/RobbyGrean/sidecontract
 ## Source of truth and working across computers
 
 - GitHub is the shared source of truth. `main` remains the buildable sidecontract `1.0.0` baseline until unfinished work is integrated.
-- Active work checkpoint: `codex/procurement-tor-wip`.
-- On an existing clone, run `git fetch origin`, switch to `codex/procurement-tor-wip`, then `git pull --ff-only` before continuing.
+- WIP is the paused Procurement TOR checkpoint and is not the general build baseline. Use main for general sidecontract work.
+- For general work on another computer: run git fetch origin, git switch main, then git pull --ff-only origin main.
+- Resume the paused TOR checkpoint only when explicitly working on it: run git fetch origin, switch to codex/procurement-tor-wip, then pull that branch with --ff-only.
 - After each meaningful work session, update this file, commit, and push so another computer can resume from GitHub.
-- The standalone clone currently has 31 pending paths (28 deleted, 3 untracked: 30 DOCX and 1 PDF), with none staged. No source, build, installer, or Config files are pending; the local files remain untouched while document work is paused.
+- The current standalone clone has 31 pending Template paths (28 deleted, 3 untracked: 30 DOCX and 1 PDF), with none staged. These files exist only in this clone and are not synchronized to GitHub; preserve the clone while TOR work is paused. Use main on other computers for general work.
 - Workspace check on 2026-11-12 found the selected checkout was linked to a local repository with Jangmao70 history, not this standalone project. No files in that checkout were changed in this session. Resume from the standalone clone and preserve its pending local changes.
 
 ## Completed baseline
@@ -64,3 +65,4 @@ The WIP branch contains a Procurement TOR change:
 - 2026-11-12: Rechecked current GitHub main and WIP trees (e132eb0 and 3111e26): the only 14 differing paths are under Template; all other tracked blobs, including source, build, Config, web text, and PROGRESS.md, match. Static scans found no Jangmao70/Khet70 references in tracked app/build/config/web files, and updater/build URLs point to RobbyGrean/sidecontract. TOR files remain untouched; no tests or build were run.
 - 2026-11-12: Searched tracked filenames and non-Template Markdown/text in the WIP tree for Jangmao70, Khet70, and 346; found no legacy-named paths or text matches. Template content was excluded and no files were changed.
 - 2026-11-12: Audited current main install/data/update paths: user data, template/output roots, and the schema-compatibility fallback resolve under LocalAppData/sidecontract; Inno AppId/default install path and executable build output are sidecontract; updater manifest and installer URLs target RobbyGrean/sidecontract main. Static source review only; no build or installation was run.
+- 2026-11-12: Corrected cross-computer branch guidance: main is the default for general work; WIP is a paused, not-buildable TOR checkpoint. Documented that the 31 pending Template paths exist only in the current clone and must be preserved there.

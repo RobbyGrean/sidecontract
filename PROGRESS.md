@@ -9,6 +9,7 @@ Repository: https://github.com/RobbyGrean/sidecontract
 - Active work checkpoint: `codex/procurement-tor-wip`.
 - On an existing clone, run `git fetch origin`, switch to `codex/procurement-tor-wip`, then `git pull --ff-only` before continuing.
 - After each meaningful work session, update this file, commit, and push so another computer can resume from GitHub.
+- The standalone clone currently has 31 uncommitted local paths and no staged changes. No C#, PowerShell, installer-script, or Config files are pending; remaining local changes are left untouched and have not been pushed.
 - Workspace check on 2026-11-12 found the selected checkout was linked to a local repository with Jangmao70 history, not this standalone project. No files in that checkout were changed in this session. Resume from the standalone clone and preserve its pending local changes.
 
 ## Completed baseline
@@ -52,3 +53,4 @@ The WIP branch contains a Procurement TOR change:
 - 2026-11-12: Verified the public GitHub repository directly: `main` was at `8edf1b5` and `codex/procurement-tor-wip` was at `e50c827`. The selected workspace was a separate Jangmao70-linked checkout; no source or template files were changed. The standalone clone's existing local changes remain untouched.
 - 2026-11-12: Audited the standalone app identity and replaced three residual `346` labels in two C# files (two user-facing error messages and one renderer marker). No templates were edited; no tests or build were run.
 - 2026-11-12: Compared committed app identities: Jangmao70 uses `%LOCALAPPDATA%\\Jangmao70`; sidecontract uses `%LOCALAPPDATA%\\sidecontract`, AppId `sidecontract`, and its own GitHub updater URLs. This was a static configuration audit; no installation was run.
+- 2026-11-12: Rechecked GitHub state: `main` was at `8481722`, WIP at `cc46c88`, and `PROGRESS.md` matched across branches. The standalone clone had 31 uncommitted paths, zero staged files, and no pending source/build/installer/Config files; local work was left untouched.

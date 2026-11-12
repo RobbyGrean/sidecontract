@@ -9,7 +9,7 @@ Repository: https://github.com/RobbyGrean/sidecontract
 - Active work checkpoint: `codex/procurement-tor-wip`.
 - On an existing clone, run `git fetch origin`, switch to `codex/procurement-tor-wip`, then `git pull --ff-only` before continuing.
 - After each meaningful work session, update this file, commit, and push so another computer can resume from GitHub.
-- The standalone clone currently has 31 uncommitted local paths and no staged changes. No C#, PowerShell, installer-script, or Config files are pending; remaining local changes are left untouched and have not been pushed.
+- The standalone clone currently has 31 pending paths (28 deleted, 3 untracked: 30 DOCX and 1 PDF), with none staged. No source, build, installer, or Config files are pending; the local files remain untouched while document work is paused.
 - Workspace check on 2026-11-12 found the selected checkout was linked to a local repository with Jangmao70 history, not this standalone project. No files in that checkout were changed in this session. Resume from the standalone clone and preserve its pending local changes.
 
 ## Completed baseline
@@ -57,3 +57,4 @@ The WIP branch contains a Procurement TOR change:
 - 2026-11-12: Rechecked GitHub state: `main` was at `8481722`, WIP at `cc46c88`, and `PROGRESS.md` matched across branches. The standalone clone had 31 uncommitted paths, zero staged files, and no pending source/build/installer/Config files; local work was left untouched.
 - 2026-11-12: Scanned all 13 HTML/JS/CSS/SVG files on `main`; found three sidecontract repository URL occurrences and no Jangmao70/Khet70 or other owner-repository links.
 - 2026-11-12: Compared all reachable commits between sidecontract and the legacy Jangmao70 repository; found no shared commit hashes. sidecontract has two internal root commits (repository initializer and 1.0.0 baseline); public history was left unchanged.
+- 2026-11-12: A path-only inventory of the standalone WIP worktree found 31 pending document paths (28 deletions, 3 untracked: 30 DOCX and 1 PDF); no source/config changes. The files remain local while document work is paused; their contents were not inspected.

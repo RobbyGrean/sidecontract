@@ -19,6 +19,7 @@ Repository: https://github.com/RobbyGrean/sidecontract
 - Set app identity, installer AppId, and install folder to `sidecontract` / `%LOCALAPPDATA%\sidecontract`.
 - Set the app and installer version to `1.0.0`; the public updater manifest points to this repository.
 - Static identity check on 2026-11-12 confirmed app data, installer ID/path, and updater downloads are scoped to sidecontract.
+- Static scan of 13 public web text files on `main` found links to the sidecontract repository only, with no Jangmao70/Khet70 repository or installer references.
 - Built the Windows executable and installer successfully for the baseline. The baseline artifacts and `update.json` are in `assets/downloads`.
 - Rebuilt `sidecontract.exe` from current `main` on 2026-11-12 with `build-exe-sidecontract.ps1`; the build succeeded. The full installer was not regenerated.
 
@@ -54,3 +55,4 @@ The WIP branch contains a Procurement TOR change:
 - 2026-11-12: Audited the standalone app identity and replaced three residual `346` labels in two C# files (two user-facing error messages and one renderer marker). No templates were edited; no tests or build were run.
 - 2026-11-12: Compared committed app identities: Jangmao70 uses `%LOCALAPPDATA%\\Jangmao70`; sidecontract uses `%LOCALAPPDATA%\\sidecontract`, AppId `sidecontract`, and its own GitHub updater URLs. This was a static configuration audit; no installation was run.
 - 2026-11-12: Rechecked GitHub state: `main` was at `8481722`, WIP at `cc46c88`, and `PROGRESS.md` matched across branches. The standalone clone had 31 uncommitted paths, zero staged files, and no pending source/build/installer/Config files; local work was left untouched.
+- 2026-11-12: Scanned all 13 HTML/JS/CSS/SVG files on `main`; found three sidecontract repository URL occurrences and no Jangmao70/Khet70 or other owner-repository links.

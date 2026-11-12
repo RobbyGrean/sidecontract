@@ -9,6 +9,7 @@ Repository: https://github.com/RobbyGrean/sidecontract
 - Active work checkpoint: `codex/procurement-tor-wip`.
 - On an existing clone, run `git fetch origin`, switch to `codex/procurement-tor-wip`, then `git pull --ff-only` before continuing.
 - After each meaningful work session, update this file, commit, and push so another computer can resume from GitHub.
+- Workspace check on 2026-11-12 found the selected checkout was linked to a local repository with Jangmao70 history, not this standalone project. No files in that checkout were changed in this session. Resume from the standalone clone and preserve its pending local changes.
 
 ## Completed baseline
 
@@ -33,7 +34,8 @@ The WIP branch contains a Procurement TOR change:
 
 ## Next steps
 
-1. Keep TOR changes parked until the owner asks to resume document work.
+1. Resume from the standalone clone after preserving its existing local changes.
+2. Keep TOR changes parked until the owner asks to resume document work.
 2. Reconcile the tagged TOR with the app route model and decide whether the existing 13 route variants remain supported or need an explicit migration.
 3. Rebuild and verify all affected procurement document cases after integration.
 4. Update release artifacts and merge the work into `main` only after it is buildable and verified.
@@ -46,8 +48,4 @@ The WIP branch contains a Procurement TOR change:
 - 2026-11-12: Audited placeholder rendering; new tags need app-side value mapping, while tags split across Word text runs are supported.
 - 2026-11-12: Rebuilt the executable from current main; compilation succeeded.
 - 2026-11-12: Owner asked to pause TOR document work; no feature coding or document edits were started in this session.
-
-
-
-
-
+- 2026-11-12: Verified the public GitHub repository directly: `main` was at `8edf1b5` and `codex/procurement-tor-wip` was at `e50c827`. The selected workspace was a separate Jangmao70-linked checkout; no source or template files were changed. The standalone clone's existing local changes remain untouched.

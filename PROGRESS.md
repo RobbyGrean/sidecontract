@@ -39,9 +39,9 @@ The WIP branch contains a Procurement TOR change:
 
 1. Resume from the standalone clone after preserving its existing local changes.
 2. Keep TOR changes parked until the owner asks to resume document work.
-2. Reconcile the tagged TOR with the app route model and decide whether the existing 13 route variants remain supported or need an explicit migration.
-3. Rebuild and verify all affected procurement document cases after integration.
-4. Update release artifacts and merge the work into `main` only after it is buildable and verified.
+3. Reconcile the tagged TOR with the app route model and decide whether the existing 13 route variants remain supported or need an explicit migration.
+4. Rebuild and verify all affected procurement document cases after integration.
+5. Update release artifacts and merge the work into `main` only after it is buildable and verified.
 
 ## Work log
 

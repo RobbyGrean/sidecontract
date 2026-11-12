@@ -18,6 +18,7 @@ Repository: https://github.com/RobbyGrean/sidecontract
 - Set app identity, installer AppId, and install folder to `sidecontract` / `%LOCALAPPDATA%\sidecontract`.
 - Set the app and installer version to `1.0.0`; the public updater manifest points to this repository.
 - Static identity check on 2026-11-12 confirmed app data, installer ID/path, and updater downloads are scoped to sidecontract.
+- 2026-11-12: Compared committed app identities: Jangmao70 uses `%LOCALAPPDATA%\\Jangmao70`; sidecontract uses `%LOCALAPPDATA%\\sidecontract`, AppId `sidecontract`, and its own GitHub updater URLs. This was a static configuration audit; no installation was run.
 - Built the Windows executable and installer successfully for the baseline. The baseline artifacts and `update.json` are in `assets/downloads`.
 - Rebuilt `sidecontract.exe` from current `main` on 2026-11-12 with `build-exe-sidecontract.ps1`; the build succeeded. The full installer was not regenerated.
 
@@ -51,3 +52,4 @@ The WIP branch contains a Procurement TOR change:
 - 2026-11-12: Owner asked to pause TOR document work; no feature coding or document edits were started in this session.
 - 2026-11-12: Verified the public GitHub repository directly: `main` was at `8edf1b5` and `codex/procurement-tor-wip` was at `e50c827`. The selected workspace was a separate Jangmao70-linked checkout; no source or template files were changed. The standalone clone's existing local changes remain untouched.
 - 2026-11-12: Audited the standalone app identity and replaced three residual `346` labels in two C# files (two user-facing error messages and one renderer marker). No templates were edited; no tests or build were run.
+- 2026-11-12: Compared committed app identities: Jangmao70 uses `%LOCALAPPDATA%\\Jangmao70`; sidecontract uses `%LOCALAPPDATA%\\sidecontract`, AppId `sidecontract`, and its own GitHub updater URLs. This was a static configuration audit; no installation was run.

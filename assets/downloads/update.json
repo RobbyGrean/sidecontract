@@ -2,6 +2,6 @@
     "schemaVersion":  1,
     "version":  "1.0.0",
     "installerUrl":  "https://raw.githubusercontent.com/RobbyGrean/sidecontract/main/assets/downloads/sidecontract-Setup.exe",
-    "installerSha256":  "53FB39DF316B5554E8980025745CA7118FFF686050D1DB4CB0B643FF945D2822",
+    "installerSha256":  "C67FC17001B3199B03151EE904B0F26AA898D9058FFB7801746885A3DCFFF4F9",
     "databaseSha256":  "1F93E15642DC14970467954D5BC0FAF6F92EBC46C58ADBC238308D3DDF7A0ED8"
 }

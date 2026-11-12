@@ -416,7 +416,7 @@ namespace Sidecontract
             }
             catch (Exception ex)
             {
-                throw new SidecontractStoreException("ไม่สามารถอ่านข้อมูล Template ของเอกสาร 346 ได้ ไฟล์เดิมยังคงอยู่", ex);
+                throw new SidecontractStoreException("ไม่สามารถอ่านข้อมูล Template ของ sidecontract ได้ ไฟล์เดิมยังคงอยู่", ex);
             }
         }
 
@@ -452,7 +452,7 @@ namespace Sidecontract
                 catch
                 {
                 }
-                throw new SidecontractStoreException("ไม่สามารถบันทึกข้อมูล Template ของเอกสาร 346 ได้ ข้อมูลในฟอร์มยังคงอยู่", ex);
+                throw new SidecontractStoreException("ไม่สามารถบันทึกข้อมูล Template ของ sidecontract ได้ ข้อมูลในฟอร์มยังคงอยู่", ex);
             }
         }
 

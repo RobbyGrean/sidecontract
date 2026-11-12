@@ -142,7 +142,7 @@ namespace Sidecontract
                 var suffixStart = Math.Max(0, match.Index + match.Length - last.Start);
                 var suffix = suffixStart < lastText.Length ? lastText.Substring(suffixStart) : "";
                 var replacement = values[match.Value] ?? "";
-                var token = "\uE000DOCUMENT346" + replacementIndex.ToString() + "\uE001";
+                var token = "\uE000SIDECONTRACT_DOCUMENT_" + replacementIndex.ToString() + "\uE001";
                 replacementIndex++;
                 replacements[token] = replacement;
                 first.Node.InnerText = prefix + token + suffix;

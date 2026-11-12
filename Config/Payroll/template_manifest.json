@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "module": "Payroll",
+  "root": "Template/Payroll",
+  "documents": [
+    {
+      "id": "payroll-1",
+      "relativePath": "1. หนังสือส่งเบิกจ้างเหมา.docx",
+      "businessTagCount": 11,
+      "businessOccurrenceCount": 19,
+      "sha256": "0fd311b71b182a2efae48fe82ef59fd37d896cedd76b87c35edbbda28789775f"
+    },
+    {
+      "id": "payroll-3",
+      "relativePath": "3. ใบส่งมอบงาน.docx",
+      "businessTagCount": 19,
+      "businessOccurrenceCount": 36,
+      "sha256": "31c390083d888207fab567964cad2dc52d99c345fcfa27fc87be33c27fd6d028"
+    },
+    {
+      "id": "payroll-4",
+      "relativePath": "4. ใบตรวจรับ.docx",
+      "businessTagCount": 15,
+      "businessOccurrenceCount": 23,
+      "sha256": "357de980a1906afdc8e655fb28e05f5d2ddba239a514bdbef94d8b692d26c904"
+    },
+    {
+      "id": "payroll-5",
+      "relativePath": "5. บันทึกอนุมัติเบิกจ่าย.docx",
+      "businessTagCount": 19,
+      "businessOccurrenceCount": 29,
+      "sha256": "240c51f96e928edf4dd0361790729238f2181ad222de9d7caa94aeed9de2af18"
+    },
+    {
+      "id": "payroll-8",
+      "relativePath": "8. ใบสำคัญรับเงิน.docx",
+      "businessTagCount": 13,
+      "businessOccurrenceCount": 20,
+      "sha256": "2c16864076cb3faaa713cfbebc6357611b3b79930781c0f3d4d5a5955b4010f4"
+    }
+  ]
+}

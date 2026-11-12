@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "productName": "sidecontract",
+  "appId": "sidecontract",
+  "installRootName": "sidecontract",
+  "runtimeRoots": {
+    "app": "App",
+    "data": "Data",
+    "template": "Template",
+    "output": "Output"
+  },
+  "moduleRoots": {
+    "Payroll": {
+      "template": "Template/Payroll",
+      "config": "Config/Payroll",
+      "output": "Output/เงินเดือน"
+    },
+    "Procurement": {
+      "template": "Template/Procurement",
+      "config": "Config/Procurement",
+      "output": "Output/เอกสารจัดจ้าง"
+    }
+  },
+  "userDataFiles": {
+    "savedTemplates": "Data/saved_templates.json",
+    "preferences": "Data/preferences.json"
+  }
+}

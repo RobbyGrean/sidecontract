@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "module": "Procurement",
+  "positions": [
+    { "id": "admin-9000", "label": "ธุรการโรงเรียน 9,000", "salary": "9,000", "salaryText": "เก้าพันบาทถ้วน", "totalSalary": "108,000", "totalSalaryText": "หนึ่งแสนแปดพันบาทถ้วน", "contractMonths": 12, "teachingFlag": true, "twoSchoolsFlag": true },
+    { "id": "admin-15000", "label": "ธุรการโรงเรียน 15,000", "salary": "15,000", "salaryText": "หนึ่งหมื่นห้าพันบาทถ้วน", "totalSalary": "180,000", "totalSalaryText": "หนึ่งแสนแปดหมื่นบาทถ้วน", "contractMonths": 12, "teachingFlag": true, "twoSchoolsFlag": true },
+    { "id": "janitor", "label": "นักการภารโรง", "salary": "9,000", "salaryText": "เก้าพันบาทถ้วน", "totalSalary": "108,000", "totalSalaryText": "หนึ่งแสนแปดพันบาทถ้วน", "contractMonths": 12, "teachingFlag": false, "twoSchoolsFlag": false },
+    { "id": "disabled-care", "label": "พี่เลี้ยงเด็กพิการ", "salary": "9,000", "salaryText": "เก้าพันบาทถ้วน", "totalSalary": "108,000", "totalSalaryText": "หนึ่งแสนแปดพันบาทถ้วน", "contractMonths": 12, "teachingFlag": true, "twoSchoolsFlag": false },
+    { "id": "dormitory", "label": "ครูพักนอน", "salary": "9,000", "salaryText": "เก้าพันบาทถ้วน", "totalSalary": "108,000", "totalSalaryText": "หนึ่งแสนแปดพันบาทถ้วน", "contractMonths": 12, "teachingFlag": true, "twoSchoolsFlag": false },
+    { "id": "dream-teacher", "label": "ครูพี่เลี้ยงสานฝันฯ", "salary": "6,500", "salaryText": "หกพันห้าร้อยบาทถ้วน", "totalSalary": "26,000", "totalSalaryText": "สองหมื่นหกพันบาทถ้วน", "contractMonths": 4, "teachingFlag": true, "twoSchoolsFlag": false }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "module": "Payroll",
+  "rules": [
+    {
+      "template": "5. บันทึกอนุมัติเบิกจ่าย.docx",
+      "kind": "contextualPrefix",
+      "tag": "{คำนำหน้าชื่อ}",
+      "followingNameTag": "{ชื่อลูกจ้าง}",
+      "sourceField": "shared.employee.prefix"
+    },
+    {
+      "template": "5. บันทึกอนุมัติเบิกจ่าย.docx",
+      "kind": "contextualPrefix",
+      "tag": "{คำนำหน้าชื่อ}",
+      "followingNameTag": "{ชื่อพัสดุ}",
+      "sourceField": "shared.signers.supply.prefix"
+    },
+    {
+      "template": "5. บันทึกอนุมัติเบิกจ่าย.docx",
+      "kind": "contextualPrefix",
+      "tag": "{คำนำหน้าชื่อ}",
+      "followingNameTag": "{ชื่อหพัสดุ}",
+      "sourceField": "shared.signers.headSupply.prefix"
+    },
+    {
+      "template": "5. บันทึกอนุมัติเบิกจ่าย.docx",
+      "kind": "contextualPrefix",
+      "tag": "{คำนำหน้าชื่อ}",
+      "followingNameTag": "{ชื่อการเงิน}",
+      "sourceField": "shared.signers.finance.prefix"
+    },
+    {
+      "template": "5. บันทึกอนุมัติเบิกจ่าย.docx",
+      "kind": "schoolName",
+      "tag": "{ชื่อโรงเรียน}",
+      "literalPrefixBeforeTag": "โรงเรียน",
+      "sourceField": "shared.school.nameWithoutPrefix"
+    },
+    {
+      "template": "5. บันทึกอนุมัติเบิกจ่าย.docx",
+      "kind": "schoolName",
+      "tag": "{ชื่อโรงเรียน}",
+      "literalPrefixBeforeTag": "",
+      "sourceField": "shared.school.name"
+    }
+  ]
+}

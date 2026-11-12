@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="คู่มือการติดตั้งและใช้งาน sidecontract">
+  <title>คู่มือการใช้งาน — sidecontract</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#0f172a;--muted:#475569;--blue:#2563eb;--soft:#f4f7fb;--line:#dbe4ee;--navy:#0f172a;--orange:#eb6c36;--warn:#fff7ed;--green:#0f766e;--purple:#6d5bd0}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:96px}body{margin:0;background:var(--soft);color:var(--ink);font-family:'Noto Sans Thai',Tahoma,sans-serif;line-height:1.75}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:3px solid #93c5fd;outline-offset:4px}.skip{position:fixed;left:16px;top:-80px;background:#fff;padding:8px 12px;z-index:3}.skip:focus{top:12px}.top{background:var(--navy);color:#fff;border-bottom:2px solid var(--blue)}.top-inner{max-width:1100px;margin:auto;padding:24px 28px 20px;display:flex;align-items:end;justify-content:space-between;gap:24px}.brand{color:#fff;font-size:24px;font-weight:700}.brand:hover{text-decoration:none}.brand span{color:#93c5fd}.top p{color:#cbd5e1;font-size:13px;margin:2px 0 0}.top nav{display:flex;gap:20px;font-size:13px;white-space:nowrap}.top nav a{color:#dbeafe}.layout{max-width:1100px;margin:0 auto;padding:34px 28px 70px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:42px}.toc{position:sticky;top:24px;align-self:start;border:1px solid var(--line);background:#fff;padding:18px}.toc strong{font-size:14px}.toc a{display:block;padding:7px 0;color:var(--muted);font-size:13px}.toc a:hover{color:var(--blue)}main{min-width:0}.intro{border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:28px}.eyebrow{color:var(--blue);font-size:13px;font-weight:600;letter-spacing:.02em;margin:0 0 7px}.intro h1{font-size:clamp(30px,4vw,43px);line-height:1.35;margin:0}.intro p{color:var(--muted);margin:12px 0 0}.section{background:#fff;border:1px solid var(--line);padding:26px 30px;margin-top:20px}.section h2{font-size:22px;line-height:1.45;margin:0 0 14px}.section h3{font-size:17px;margin:24px 0 7px;color:#164e63}.section h3:first-of-type{margin-top:14px}.section p{margin:9px 0;color:var(--muted)}.section ol,.section ul{margin:9px 0;padding-left:26px}.section li{margin:4px 0}.section table{width:100%;border-collapse:collapse;margin:14px 0;color:var(--muted);font-size:14px}.section th,.section td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:9px 10px}.section th{color:var(--ink);background:#f8fafc;font-weight:600}.callout{border:1px solid #bfdbfe;border-radius:10px;background:#eff6ff;padding:13px 16px;margin:16px 0;color:#1e3a8a}.warning{border-color:#fed7aa;background:var(--warn);color:#7c2d12}.code{background:#f1f5f9;border:1px solid var(--line);border-radius:5px;padding:12px 14px;overflow:auto;font:13px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre-wrap}.downloads{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}.button{display:inline-block;background:var(--blue);color:#fff;padding:9px 15px;font-size:14px;font-weight:600}.button.secondary{background:#fff;color:var(--blue);border:1px solid #bfdbfe}.button:hover{text-decoration:none;background:#1d4ed8}.button.secondary:hover{background:#eff6ff}.warning-shot{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 0}.warning-shot figure{margin:0;border:1px solid var(--line);background:#fff}.warning-shot img{display:block;width:100%;height:auto}.warning-shot figcaption{font-size:12px;color:var(--muted);padding:7px 10px}.link-list{display:grid;gap:6px}.footer{background:#fff;border-top:1px solid var(--line);padding:24px 28px;color:var(--muted);font-size:13px}.footer-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}@media(max-width:760px){.top-inner{display:block;padding-inline:20px}.top nav{margin-top:15px;gap:14px;flex-wrap:wrap}.layout{display:block;padding:22px 16px 50px}.toc{position:static;margin-bottom:20px}.section{padding:21px 18px}.warning-shot{grid-template-columns:1fr}.section table{font-size:13px}.footer{padding-inline:16px}}
+    /* Guide polish: strong reading landmarks, topic accents and restrained depth. */
+    body{background:var(--soft)}
+    .top{border-bottom-width:2px;box-shadow:0 12px 28px -24px #0f172a}
+    .top-inner{padding-top:27px;padding-bottom:23px}
+    .brand{letter-spacing:-.02em}
+    .layout{padding-top:38px;gap:48px}
+    .toc{border:0;border-top:3px solid var(--blue);box-shadow:0 12px 30px -24px #0f172a;border-radius:14px;padding:19px 18px;background:#fff}
+    .toc strong{display:block;color:var(--ink);font-size:15px;margin-bottom:7px}
+    .toc a{position:relative;border-top:1px solid transparent;padding:8px 9px 8px 13px;transition:color .18s,background .18s,transform .18s}
+    .toc a:hover{background:#eff6ff;text-decoration:none;transform:translateX(2px)}
+    .toc a.active{color:var(--ink);font-weight:700;background:#eaf2ff}
+    .toc a.active:before{content:'';position:absolute;left:0;top:7px;bottom:7px;width:3px;background:var(--blue);border-radius:3px}
+    .intro{border:0;border-radius:18px;background:var(--navy);box-shadow:0 22px 42px -30px #0f172a;padding:35px 38px 31px;position:relative;overflow:hidden}
+    .intro:after{content:'';position:absolute;right:-70px;top:-110px;width:260px;height:260px;border:1px solid #60a5fa42;border-radius:50%;box-shadow:0 0 0 24px #60a5fa0f,0 0 0 48px #60a5fa08;pointer-events:none}
+    .intro h1{color:#fff;font-size:clamp(32px,4.2vw,48px);letter-spacing:-.035em;position:relative;z-index:1}
+    .intro p{color:#cbd5e1;max-width:680px;position:relative;z-index:1}
+    .intro .eyebrow{display:none}
+    .guide-stats{display:flex;flex-wrap:wrap;gap:22px;margin-top:22px;color:#dbeafe;font-size:12px;position:relative;z-index:1}
+    .guide-stats span{display:inline-flex;align-items:baseline;gap:6px;border-top:1px solid #93c5fd66;padding-top:8px}
+    .guide-stats strong{font-size:20px;color:#fff;line-height:1}
+    .guide-map{background:#fff;box-shadow:0 14px 32px -28px #0f172a;border-radius:18px;padding:26px 30px;margin:20px 0 28px}
+    .map-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding-bottom:15px}
+    .map-heading h2{font-size:20px;margin:0}
+    .map-heading p{font-size:12px;margin:0;text-align:right}
+    .map-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:23px;position:relative}
+    .map-flow:before{content:'';position:absolute;left:8%;right:8%;top:18px;height:2px;background:#dbeafe;z-index:0}
+    .map-step{position:relative;z-index:1;text-align:center;color:var(--muted);font-size:12px;padding-inline:6px}
+    .map-step b{display:grid;place-items:center;width:36px;height:36px;margin:0 auto 9px;border-radius:50%;background:#eff6ff;border:2px solid #93c5fd;color:var(--blue);font-size:13px}
+    .map-step:last-child b{background:#ecfdf5;border-color:#6ee7b7;color:var(--green)}
+    .section{border:0;border-radius:18px;box-shadow:0 14px 32px -28px #0f172a;padding:29px 32px;margin-top:22px;position:relative;overflow:hidden;scroll-margin-top:100px}
+    .section:before{content:'';display:block;width:58px;height:4px;border-radius:4px;background:var(--section-accent,var(--blue));margin-bottom:17px}
+    .section h2{font-size:24px;letter-spacing:-.025em;margin-bottom:16px}
+    .section h3{color:var(--section-accent,var(--blue));font-size:17px}
+    #who{--section-accent:#2563eb}#download{--section-accent:#eb6c36}#install{--section-accent:#0f766e}#start{--section-accent:#2563eb}#template{--section-accent:#0f766e}#output{--section-accent:#6d5bd0}#trouble{--section-accent:#eb6c36}#uninstall{--section-accent:#64748b}
+    .section table{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+    .section th{background:#f1f5f9}
+    .callout{border-radius:10px;box-shadow:0 9px 20px -19px #0f172a}
+    .downloads{margin-top:18px}
+    .downloads .button{border-radius:10px;box-shadow:0 9px 20px -15px #2563eb;transition:transform .18s,box-shadow .18s}
+    .downloads .button:hover{transform:translateY(-2px);box-shadow:0 13px 24px -15px #2563eb}
+    .warning-shot figure{border:0;border-radius:10px;overflow:hidden;box-shadow:0 10px 22px -18px #0f172a}
+    .warning-shot figcaption{background:#f8fafc}
+    .link-list a{display:inline-flex;width:max-content;max-width:100%;padding:4px 0}
+    .footer{margin-top:4px}
+    @media(max-width:760px){.layout{padding-top:22px}.intro{padding:27px 22px 24px}.guide-stats{gap:13px 18px}.guide-map{padding:22px 18px}.map-heading{display:block}.map-heading p{text-align:left;margin-top:5px}.map-flow{display:block;margin-top:18px}.map-flow:before{left:17px;right:auto;top:18px;bottom:18px;width:2px;height:auto}.map-step{display:flex;align-items:center;text-align:left;gap:12px;padding:7px 0}.map-step b{flex:0 0 36px;margin:0}.section{padding:24px 20px;margin-top:16px}.section h2{font-size:21px}.section table{display:block;overflow-x:auto;white-space:normal}.section th,.section td{min-width:118px}.downloads .button{width:100%;text-align:center}.warning-shot{gap:10px}}
+    @media(prefers-reduced-motion:reduce){.toc a,.downloads .button{transition:none}.toc a:hover,.downloads .button:hover{transform:none}}
+  main{min-width:0}.code,code{overflow-wrap:anywhere}a:focus-visible{outline:3px solid #2563eb;outline-offset:4px}
+  .breadcrumbs{font-size:13px;color:var(--muted);margin-bottom:18px}
+  </style>
+  <link rel="stylesheet" href="experience.css">
+  <script src="theme.js"></script>
+  <script src="experience.js" defer></script>
+</head>
+<body class="guide-page">
+  <a class="skip" href="#main">ข้ามไปเนื้อหา</a>
+  <header class="top">
+    <div class="top-inner">
+      <div><a class="brand" href="index.html">Jangmao<span>70</span></a><p>คู่มือการติดตั้งและสร้างเอกสาร Word</p></div>
+      <nav aria-label="เมนูคู่มือ"><a href="index.html">หน้าแรก</a><a href="index.html#screenshots">ภาพโปรแกรม</a><a href="GUIDE.md">ฉบับ Markdown</a><a href="https://github.com/RobbyGrean/sidecontract">GitHub</a><button class="theme-toggle" type="button" aria-label="เปิดโหมดมืด" aria-pressed="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/></svg><span>โหมดมืด</span></button></nav>
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="toc" aria-label="สารบัญ"><strong>ในคู่มือนี้</strong><a href="#who">ใครต้องทำอะไร</a><a href="#download">ดาวน์โหลด</a><a href="#install">ติดตั้ง</a><a href="#start">เริ่มใช้งาน</a><a href="#template">Template</a><a href="#output">สร้างเอกสาร</a><a href="#trouble">แก้ปัญหา</a><a href="#uninstall">ถอนการติดตั้ง</a></aside>
+    <main id="main">
+      <nav class="breadcrumbs" aria-label="เส้นทางหน้า"><a href="index.html">หน้าแรก</a><span aria-hidden="true"> / </span><span aria-current="page">คู่มือการใช้งาน</span></nav><section class="intro"><p class="eyebrow">sidecontract · USER GUIDE</p><h1>คู่มือการใช้งาน sidecontract</h1><p>สำหรับผู้ที่ต้องการติดตั้งโปรแกรม กรอกข้อมูล และสร้างเอกสาร Word โดยไม่จำเป็นต้องรู้เรื่องโค้ด</p><div class="guide-stats" aria-label="ภาพรวมโปรแกรม"><span><strong>2</strong> workflow</span><span><strong>5</strong> Template เงินเดือน</span><span><strong>34</strong> เอกสารจัดจ้าง</span><span><strong>OFFLINE</strong> เก็บข้อมูลในเครื่อง</span></div></section>
+
+      <section class="guide-map" aria-labelledby="map-title"><div class="map-heading"><h2 id="map-title">เส้นทางใช้งานแบบย่อ</h2><p>เลือกงาน → เตรียมข้อมูล → ตรวจทาน → สร้างเอกสาร</p></div><div class="map-flow" aria-label="ขั้นตอนการใช้งาน"><div class="map-step"><b>01</b><span>เลือกแท็บงาน</span></div><div class="map-step"><b>02</b><span>กรอกหรือโหลด Template</span></div><div class="map-step"><b>03</b><span>ตรวจข้อมูล</span></div><div class="map-step"><b>04</b><span>เลือกเอกสาร</span></div><div class="map-step"><b>05</b><span>สร้าง Word</span></div></div></section>
+
+      <section class="section" id="who"><h2>ใครต้องทำอะไร</h2><table><thead><tr><th>ผู้ใช้งาน</th><th>ทำอะไร</th></tr></thead><tbody><tr><td>ผู้กรอกข้อมูล</td><td>ดาวน์โหลด Installer ติดตั้งโปรแกรม กรอกข้อมูล และตรวจเอกสารก่อนสร้าง</td></tr><tr><td>ผู้ดูแลงานเอกสาร</td><td>เตรียมข้อมูลโรงเรียน ลูกจ้าง กรรมการ TOR งวดเบิก และเลือกเอกสารที่ต้องการ</td></tr><tr><td>ผู้สนใจ source code</td><td>ดาวน์โหลด Source ZIP เพื่อศึกษาเท่านั้น ไม่จำเป็นต่อการติดตั้งหรือใช้งาน</td></tr></tbody></table></section>
+
+      <section class="section" id="download"><h2>ดาวน์โหลดไฟล์</h2><div class="downloads"><a class="button" href="assets/downloads/sidecontract-Installer.zip" download>ดาวน์โหลดตัวติดตั้ง</a><a class="button secondary" href="assets/downloads/sidecontract-Source.zip" download>ดาวน์โหลด Source code</a></div><p>ตรวจชื่อไฟล์ก่อนเปิดทุกครั้ง ต้องเป็นไฟล์จาก repository <code>RobbyGrean/sidecontract</code> และชื่อควรตรงกับไฟล์ด้านบน</p><div class="callout warning"><strong>คำเตือนจาก Chrome</strong><br>Chrome อาจเตือนว่าไฟล์ ZIP ดูน่าสงสัย เพราะไฟล์ยังมีผู้ดาวน์โหลดไม่มากหรือยังไม่มีชื่อเสียงจากผู้ให้บริการ คำเตือนอาจเกิดกับทั้ง Installer และ Source ZIP</div><ol><li>เปิดรายการดาวน์โหลดของ Chrome แล้วคลิกรายการที่มีคำเตือนหรือเครื่องหมายลูกศร</li><li>ตรวจว่าดาวน์โหลดจาก <strong>RobbyGrean/sidecontract</strong> และชื่อไฟล์เป็น <strong>sidecontract-Installer.zip</strong></li><li>เมื่อตรวจสอบและเชื่อถือไฟล์แล้ว คลิก <strong>ดาวน์โหลดไฟล์ที่น่าสงสัย</strong> (บางรุ่นใช้ Keep / เก็บไว้ หรือ Keep anyway / เก็บไว้ต่อไป)</li><li>ดาวน์โหลดเสร็จแล้ว แตก ZIP ก่อนเปิด <strong>sidecontract-Setup.exe</strong></li></ol><div class="warning-shot"><figure><img src="assets/guide/chrome-warning-history.png" alt="ตัวอย่างคำเตือนในรายการดาวน์โหลดของ Chrome"><figcaption>ตัวอย่างคำเตือนในรายการดาวน์โหลด</figcaption></figure><figure><img src="assets/guide/chrome-warning-detail.png" alt="ตัวอย่างหน้ารายละเอียดคำเตือนของ Chrome"><figcaption>ตัวอย่างหน้ารายละเอียดคำเตือน</figcaption></figure></div><p>ภาพเป็นตัวอย่างจาก Chrome หน้าตาอาจเปลี่ยนตามรุ่น แต่หลักการตรวจสอบเหมือนกัน</p><ol><li>ดาวน์โหลดจาก repository <code>RobbyGrean/sidecontract</code> จริง</li><li>ชื่อไฟล์ตรงกับ <code>sidecontract-Installer.zip</code> หรือ <code>sidecontract-Source.zip</code></li><li>ถ้าแหล่งที่มาหรือชื่อไฟล์ไม่ตรง ให้ยกเลิกและอย่าเปิดไฟล์</li></ol></section>
+
+      <section class="section" id="install"><h2>วิธีติดตั้ง</h2><ol><li>ดาวน์โหลด <code>sidecontract-Installer.zip</code></li><li>คลิกขวาไฟล์ ZIP แล้วเลือก <strong>Extract All / แตกไฟล์ทั้งหมด</strong></li><li>เปิดโฟลเดอร์ที่แตกออกมา แล้วเปิด <code>sidecontract-Setup.exe</code></li><li>รอให้ตัวติดตั้งทำงานจนเสร็จ</li><li>เปิดโปรแกรมจาก shortcut ชื่อ sidecontract บน Desktop หรือ Start Menu</li></ol><div class="callout"><strong>ก่อนติดตั้งรุ่นใหม่</strong><br>อย่าเปิด Setup จากด้านใน ZIP และควรปิด sidecontract กับไฟล์ Word ที่เกี่ยวข้องก่อนติดตั้งรุ่นใหม่ทับรุ่นเดิม</div><h3 id="smartscreen">เมื่อขึ้น Windows protected your PC</h3><p class="click-sequence">More info → Run anyway</p><ol><li>เมื่อขึ้น <strong>Windows protected your PC</strong> ให้คลิก <strong>More info / ข้อมูลเพิ่มเติม</strong> ตามวงกลมในภาพ</li><li>ตรวจชื่อแอปให้เป็น <strong>sidecontract-Setup.exe</strong> จากไฟล์ที่ดาวน์โหลดจากเว็บไซต์นี้</li><li>คลิก <strong>Run anyway / เรียกใช้ต่อไป</strong> ที่ปรากฏขึ้น แล้วทำตามหน้าต่างติดตั้ง</li></ol><figure class="smartscreen-shot"><a href="assets/guide/windows-smartscreen.png" target="_blank" rel="noopener"><img src="assets/guide/windows-smartscreen.png" width="536" height="500" alt="ตัวอย่าง Windows protected your PC: คลิก More info ด้านบน แล้วคลิก Run anyway ด้านล่างที่วงไว้"></a><figcaption>ภาพรวมสองขั้นตอน: More info → Run anyway · คลิกภาพเพื่อดูขนาดเต็ม</figcaption></figure><p class="install-note">SmartScreen อาจเตือนเมื่อแอปยังไม่มีชื่อเสียงเพียงพอหรือไม่มีลายเซ็นที่ระบบรู้จัก ให้ทำต่อเฉพาะไฟล์ที่คุณตรวจสอบและเชื่อถือ หากไม่มีปุ่ม Run anyway เครื่องอาจถูกควบคุมด้วยนโยบายองค์กร ให้ติดต่อผู้ดูแลเครื่อง</p></section>
+
+      <section class="section" id="start"><h2>เริ่มใช้งาน</h2><p>sidecontract เป็นโปรแกรม Windows แบบออฟไลน์ มีสองแท็บ: สีเขียวสำหรับจัดซื้อจัดจ้างและสัญญา สีฟ้าสำหรับเบิกเงินเดือน แต่ละแท็บแยกข้อมูลเฉพาะงานและสร้างผลลัพธ์คนละโฟลเดอร์</p><p><a href="index.html#screenshots">ดูแผนภาพขั้นตอนการทำงาน</a></p><h3>แท็บจัดซื้อจัดจ้างและสัญญา</h3><ol><li><strong>ข้อมูลโรงเรียน</strong> — ชื่อโรงเรียน เขตพื้นที่ และผู้รับผิดชอบ</li><li><strong>กรรมการ TOR</strong> — กรรมการ 1–3 และเลขที่คำสั่งแต่งตั้ง TOR และตรวจรับ</li><li><strong>ข้อมูลลูกจ้าง</strong> — ข้อมูลส่วนตัว ตำแหน่ง เงินเดือน การศึกษา ที่อยู่ และข้อมูลบัตร</li><li><strong>สรุปชุดเอกสารที่ต้องการสร้าง</strong> — ตรวจรายการเอกสารก่อนสร้าง</li></ol><h3>แท็บเบิกเงินเดือน</h3><p>กรอกข้อมูลรอบเบิก ผู้รับจ้าง ตำแหน่ง เงินเดือน วันที่ และข้อมูลผู้ลงนาม จากนั้นเลือกเอกสารที่ต้องการสร้าง</p><p>ถ้าใช้คำสั่ง <strong>เหมือนเดิม! แค่เปลี่ยนเดือน!</strong> ระบบจะเสนอเดือนถัดไปจากประวัติการสร้างเอกสารสำเร็จล่าสุดของ Template นั้น ผู้ใช้ต้องยืนยันก่อนเลื่อนเดือน หาก Template ยังไม่มีประวัติสร้างสำเร็จ ระบบจะโหลดข้อมูลแต่ให้เลือกเดือนเอง ตรวจเดือน ปี และวันที่ส่งเบิกทุกครั้งก่อนสร้าง</p><div class="callout">ช่องที่มีเครื่องหมาย <code>*</code> เป็นข้อมูลที่ควรกรอกเพื่อให้เอกสารสมบูรณ์ ช่องที่เว้นว่างอาจถูกแทนด้วยจุดตามที่ระบบกำหนด</div></section>
+
+      <section class="section" id="update"><h2>อัปเดตโปรแกรม</h2><p>รุ่นเริ่มต้น <strong>1.0.0</strong> รวมระบบจัดซื้อจัดจ้างและเบิกเงินเดือน สร้างเอกสาร Word จาก Template แยกข้อมูลของแต่ละงาน และตรวจอัปเดตจาก repository sidecontract ของตัวเองเท่านั้น</p><h3>มีปุ่มอัปเดตแล้ว</h3><ol><li>กด <strong>อัปเดตโปรแกรม</strong> มุมขวาบนเหนือสองแท็บ ถัดจาก <strong>ข้อมูลโปรแกรม</strong></li><li>ตรวจสอบรุ่นล่าสุดและยืนยันดาวน์โหลด ระบบตรวจ checksum ก่อนเปิดตัวติดตั้ง</li><li>บันทึกงานก่อนปิด หากยกเลิกจะยังไม่เริ่มติดตั้ง</li><li>ทำตามตัวติดตั้ง แล้วเปิดโปรแกรมใหม่ ตรวจเวอร์ชันจาก <strong>ข้อมูลโปรแกรม</strong></li></ol><h3>ติดตั้งครั้งแรก</h3><p>ดาวน์โหลด Installer ZIP แตกไฟล์ แล้วเปิด <code>sidecontract-Setup.exe</code> โปรแกรมติดตั้งลง <code>%LOCALAPPDATA%\sidecontract</code> และแยกข้อมูลจากแอปอื่น</p><p>ตัวติดตั้งสำรอง Template เดิมและเก็บ Data/Output การตรวจและดาวน์โหลดอัปเดตต้องใช้อินเทอร์เน็ต หากดาวน์โหลดไม่สำเร็จ โปรแกรมเดิมยังใช้งานได้</p><p>หากยังเห็นรุ่นเก่า ให้กด <strong>ข้อมูลโปรแกรม</strong> ตรวจตำแหน่ง <code>.exe</code> ที่เปิดจริง เพราะอาจเปิดโปรแกรมจากอีกโฟลเดอร์หนึ่ง</p></section>
+      <section class="section" id="template"><h2>โหลดและบันทึก Template</h2><ul><li><strong>บันทึก Template</strong> คือเก็บข้อมูลที่กรอกไว้ใช้ครั้งต่อไป ไม่ใช่การแก้ไฟล์ Word ต้นฉบับ</li><li><strong>โหลด Template</strong> คือนำข้อมูลที่เคยบันทึกกลับมาใส่ในฟอร์ม</li><li>การโหลดข้ามแท็บจะเปิดหน้าต่างให้เลือกว่าจะนำเข้าจากชุดจัดซื้อจัดจ้างและสัญญา หรือจากข้อมูลเบิกเงินเดือนเดิม</li><li>ก่อนยืนยันนำเข้าข้ามงาน ระบบจะแจ้งข้อมูลร่วมที่จะเขียนทับ ข้อมูลเฉพาะงานที่ไม่นำเข้า ช่องที่ต้นทางว่างซึ่งจะเขียนทับปลายทางเป็นค่าว่าง และช่องที่ไม่มีในต้นทางซึ่งจะคงค่าปลายทางเดิม</li></ul><p>ข้อมูลที่ใช้ร่วมกันได้ เช่น ชื่อโรงเรียน/เขต ผู้อำนวยการ เจ้าหน้าที่พัสดุ หัวหน้าเจ้าหน้าที่พัสดุ และข้อมูลลูกจ้าง เช่น ชื่อ เลขประชาชนและที่อยู่ จะถูกนำเข้าตามรายการที่ระบบรองรับ ส่วนงวดเบิก รายการเอกสาร กรรมการ TOR/ตรวจรับ ตำแหน่ง เงินเดือน และข้อมูลเฉพาะของแต่ละแท็บยังคงแยกกัน</p><div class="callout warning">ข้อมูล Template และค่าที่บันทึกไว้เป็นข้อมูลภายในเครื่อง เก็บไว้ในเครื่อง ควรสำรองข้อมูลก่อนย้ายเครื่องหรือติดตั้งระบบใหม่</div></section>
+
+      <section class="section" id="output"><h2>สร้างเอกสาร</h2><ol><li>ตรวจข้อมูลทุก section ให้ครบ</li><li>ตรวจรายการเอกสารที่เลือก</li><li>กด <strong>ตรวจสอบและสร้างเอกสาร</strong> หรือ <strong>ตรวจสอบและสร้าง Word</strong></li><li>รอจนระบบแจ้งผลสำเร็จ แล้วเปิดโฟลเดอร์ Output ตรวจไฟล์ Word</li></ol><p>โฟลเดอร์ผลลัพธ์เริ่มต้นอยู่ที่:</p><div class="code">%LOCALAPPDATA%\sidecontract\Output\เอกสารจัดจ้าง
+%LOCALAPPDATA%\sidecontract\Output\เงินเดือน</div><p>ชื่อไฟล์ผลลัพธ์อิงชื่อผู้รับจ้าง ชื่อ Template และวันที่สร้างเอกสาร หากสร้างซ้ำในวันเดียวกัน ให้ตรวจชื่อไฟล์และไฟล์เดิมก่อนนำไปใช้งาน เพื่อป้องกันการใช้เอกสารผิดชุด</p><h3>การปิดโปรแกรม</h3><p>ถ้ามีข้อมูลที่ยังไม่ได้บันทึกก่อนปิด โปรแกรมจะถามว่าจะบันทึกหรือไม่ ให้เลือกตามต้องการ หากยกเลิกหรือปิดกล่องคำถาม ข้อมูลในฟอร์มจะยังไม่ถูกทิ้ง</p></section>
+
+      <section class="section" id="trouble"><h2>ปัญหาที่พบบ่อย</h2><table><thead><tr><th>อาการ</th><th>วิธีตรวจสอบเบื้องต้น</th></tr></thead><tbody><tr><td>ดาวน์โหลดแล้ว Chrome เตือน</td><td>ตรวจ repository และชื่อไฟล์ก่อนเลือกดาวน์โหลดต่อ</td></tr><tr><td>Windows ขึ้น SmartScreen</td><td>ตรวจแหล่งที่มาและชื่อไฟล์ ห้ามปิดระบบป้องกันทั้งเครื่อง</td></tr><tr><td>เปิด Setup ไม่ได้</td><td>แตก ZIP ก่อน และตรวจว่ามี <code>sidecontract-Setup.exe</code> อยู่ในโฟลเดอร์ที่แตกแล้ว</td></tr><tr><td>สร้างเอกสารไม่ครบ</td><td>ตรวจช่องที่มี <code>*</code> รายการเอกสาร และ Template ที่เลือก</td></tr><tr><td>Word เปิดไฟล์ไม่ได้</td><td>ปิดเอกสาร Word ที่ชื่อเดียวกัน แล้วลองสร้างใหม่</td></tr><tr><td>Template หาย</td><td>อย่าย้ายหรือลบโฟลเดอร์ Template และติดตั้งรุ่นใหม่ทับโดยไม่ลบโฟลเดอร์เดิม</td></tr></tbody></table></section>
+
+      <section class="section" id="uninstall"><h2>ถอนการติดตั้ง</h2><p>ใช้ shortcut <strong>Uninstall sidecontract</strong> จาก Start Menu หรือโฟลเดอร์ติดตั้ง</p><div class="callout warning"><strong>สำรองข้อมูลก่อนยืนยัน</strong><br>การถอนการติดตั้งจะลบโฟลเดอร์ของ sidecontract รวมถึงข้อมูลใน <code>Data</code>, <code>Template</code> และ <code>Output</code> ภายในโฟลเดอร์นั้น</div><h3>สำหรับผู้สนใจ source code</h3><p>Source ZIP มี source code, config, template และสคริปต์ build ผู้ใช้งานทั่วไปไม่ต้องดาวน์โหลดไฟล์นี้เพื่อเปิดโปรแกรม และไม่ต้องติดตั้ง npm เพื่อใช้งานตัวโปรแกรม</p><div class="link-list"><a href="assets/readme/sidecontract-user-workflow.svg">ดู diagram: Workflow ของผู้ใช้</a><a href="assets/readme/sidecontract-data-flow.svg">ดู diagram: การเชื่อมโยงข้อมูลภายใน</a><a href="GUIDE.md">อ่านคู่มือฉบับ Markdown</a></div></section>
+    </main>
+  </div>
+  <script>
+    const guideSections = [...document.querySelectorAll('main .section[id]')];
+    const tocLinks = [...document.querySelectorAll('.toc a')];
+    const linkById = new Map(tocLinks.map(link => [link.getAttribute('href').slice(1), link]));
+    const observer = new IntersectionObserver(entries => {
+      entries.filter(entry => entry.isIntersecting).forEach(entry => {
+        tocLinks.forEach(link => link.classList.remove('active'));
+        const current = linkById.get(entry.target.id);
+        if (current) current.classList.add('active');
+      });
+    }, { rootMargin: '-12% 0px -70% 0px', threshold: 0 });
+    guideSections.forEach(section => observer.observe(section));
+  </script>
+  <footer class="footer"><div class="footer-inner"><span>sidecontract · คู่มือการใช้งาน</span><a href="index.html">กลับหน้าแรก</a></div></footer>
+</body>
+</html>

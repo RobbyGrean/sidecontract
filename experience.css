@@ -1,0 +1,76 @@
+/* Shared theme, installation walkthroughs, and the hero image carousel. */
+:root{color-scheme:light;--surface:#fff;--night:#0b1428}
+:root[data-theme=dark]{color-scheme:dark;--paper:#0b1428;--soft:#0b1428;--white:#142139;--surface:#142139;--ink:#eef4ff;--muted:#b8c8df;--blue:#88baff;--hover:#225ec8;--line:#334561;--green:#69dbc4;--green-soft:#153932;--blue-soft:#192f50;--warn:#38291a}
+body{background:var(--paper,var(--soft));isolation:isolate}
+body>header,body>main,body>footer,body>.layout{position:relative;z-index:1}
+button{font:inherit}
+button:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+[hidden]{display:none!important}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 12px;min-height:42px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);cursor:pointer;white-space:nowrap;font-size:12px}
+.theme-toggle svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7}
+.star-field{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;display:none}
+[data-theme=dark] .star-field{display:block}
+.star-field i{position:absolute;width:var(--size);height:var(--size);border-radius:50%;background:#c4ddff;opacity:.2;animation:twinkle var(--duration) ease-in-out var(--delay) infinite}
+.star-field i:nth-child(6n){background:#ffe0a3;box-shadow:0 0 8px #d3bd8055}
+.star-field.paused i{animation-play-state:paused}
+@keyframes twinkle{0%,100%{opacity:.12;transform:scale(.65)}50%{opacity:.8;transform:scale(1.15)}}
+.hero-carousel{scroll-margin-top:24px}
+.hero-carousel:after{content:'';position:absolute;inset:48px 3px 99px 45px;border:1px solid var(--line);background:var(--surface);border-radius:16px;transform:rotate(4deg);z-index:-1}
+.hero-carousel .preview-frame{position:relative}
+.hero-carousel .preview-content{padding:10px;aspect-ratio:5/3;background:#f8fafc;display:block;position:relative}
+.hero-carousel .hero-slide{display:block;width:100%;height:100%;animation:slide-in .35s ease-out}
+.hero-carousel .hero-slide img{display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:contain}
+.hero-carousel figcaption{min-height:24px;margin-top:22px;font-size:13px}
+.carousel-controls{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:10px}
+.carousel-controls button{border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);min-width:38px;min-height:40px;cursor:pointer}
+.carousel-controls button:hover{border-color:var(--blue)}
+.carousel-dots{display:flex;gap:0}
+.carousel-dots button{border:0;min-width:26px;width:26px;padding:0;background:transparent;position:relative}
+.carousel-dots button:after{content:'';display:block;width:7px;height:7px;border-radius:50%;background:var(--muted);opacity:.5;margin:auto}
+.carousel-dots button[aria-pressed=true]:after{background:var(--blue);opacity:1;width:17px;border-radius:5px}
+.carousel-controls [data-carousel=pause]{font-size:12px;padding-inline:10px}
+@keyframes slide-in{from{opacity:.5;transform:translateX(8px)}to{opacity:1;transform:translateX(0)}}
+.install-help{padding-block:56px;border-top:1px solid var(--line)}
+.install-walkthrough{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:32px}
+#windows-help .install-walkthrough{margin-top:0;align-items:center}
+.install-walkthrough h3{font-size:23px;line-height:1.5}
+.install-walkthrough ol{padding-left:24px;line-height:1.9;color:var(--muted)}
+.install-walkthrough li{padding:6px 0}
+.install-walkthrough strong{color:var(--ink)}
+.install-note{font-size:13px;line-height:1.8;color:var(--muted)}
+.chrome-shots{display:flex;flex-direction:column;gap:20px;align-items:center}
+.chrome-shots figure{margin:0;width:100%;max-width:400px}
+.chrome-shots img{width:100%;height:auto;border-radius:12px;display:block}
+.chrome-shots figcaption,.smartscreen-shot figcaption{font-size:12px;line-height:1.7;margin-top:10px;color:var(--muted)}
+.smartscreen-shot{margin:20px auto 0;max-width:536px;width:100%}
+.smartscreen-shot img{display:block;width:100%;height:auto;border-radius:12px}
+.click-sequence{font-size:clamp(21px,2.2vw,30px);font-weight:700;color:var(--blue);margin-block:14px}
+.guide-page .click-sequence{color:var(--blue)}
+.guide-page .top nav{align-items:center;flex-wrap:wrap}
+[data-theme=dark] .header{background:#0b1428db}
+[data-theme=dark] .page-nav,[data-theme=dark] .guide,[data-theme=dark] .import-report,[data-theme=dark] .preview-bar{background:var(--surface)}
+[data-theme=dark] .brand-mark{background:#152d52}
+[data-theme=dark] .primary{background:#225ec8;color:#fff;border-color:#4c85dd}
+[data-theme=dark] .primary:hover{background:#184ca9}
+[data-theme=dark] .secondary:hover{background:#203655;color:#cce0ff}
+[data-theme=dark] .procurement-chip{color:#87e6d0}
+[data-theme=dark] .payroll-chip{color:#b9d5ff}
+[data-theme=dark] .procurement-track{background:linear-gradient(180deg,#14352f,#142139)}
+[data-theme=dark] .payroll-track{background:linear-gradient(180deg,#192f50,#142139)}
+[data-theme=dark] .procurement-track .workflow-label,[data-theme=dark] .shared-row strong{color:#87e6d0}
+[data-theme=dark] .workflow-track .workflow-caution{color:var(--muted)}
+[data-theme=dark] .download-section{background:#071020}
+[data-theme=dark] .preview-stage:before{background:radial-gradient(ellipse at 60% 50%,#3154a333,transparent 70%)}
+[data-theme=dark] .guide-page .section,[data-theme=dark] .guide-page .toc,[data-theme=dark] .guide-page .guide-map,[data-theme=dark] .guide-page .footer{background:var(--surface)}
+[data-theme=dark] .guide-page .section h3{color:#91c6ff}
+[data-theme=dark] .guide-page .section th,[data-theme=dark] .guide-page .code,[data-theme=dark] .guide-page .warning-shot figcaption{background:#1c2d47}
+[data-theme=dark] .guide-page .toc a:hover,[data-theme=dark] .guide-page .toc a.active{background:#223957}
+[data-theme=dark] .guide-page .callout{background:#182f50;color:#d1e5ff;border-color:#345881}
+[data-theme=dark] .guide-page .warning{background:#38291a;color:#ffe0bb;border-color:#745334}
+[data-theme=dark] .guide-page .button{background:#225ec8;color:#fff}
+[data-theme=dark] .guide-page .button.secondary{background:#1c2d47;color:#cce0ff;border-color:#345881}
+[data-theme=dark] .guide-page .map-step b{background:#192f50;color:#b8d6ff;border-color:#658fc9}
+@media(max-width:1000px){.install-walkthrough{gap:30px}.header nav{gap:16px}.page-nav{flex-wrap:wrap}}
+@media(max-width:700px){.theme-toggle{padding:8px;min-width:40px}.header .theme-toggle span{display:none}.header nav{gap:12px}.hero-carousel:after{inset:39px 3px 96px 20px}.hero-carousel{padding-inline:5px}.install-help{padding-block:36px}.install-walkthrough{grid-template-columns:1fr;gap:24px;margin-top:24px}.install-walkthrough h3{font-size:21px}.chrome-shots{gap:20px}.carousel-controls{gap:4px}.carousel-dots button{min-width:24px;width:24px}.carousel-controls>button{min-width:34px}.page-nav{grid-template-columns:1fr 1fr}.guide-page .top nav{white-space:normal}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.star-field i,.hero-slide{animation:none!important}.star-field i{opacity:.35}}
+

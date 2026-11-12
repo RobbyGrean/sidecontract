@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="560" viewBox="0 0 1440 560" role="img" aria-labelledby="title desc">
+<title id="title">sidecontract — Offline Word Document Automation</title>
+<desc id="desc">โปรแกรมสร้างเอกสาร Word บน Windows รองรับงานจัดซื้อจัดจ้างและเบิกเงินเดือน</desc>
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#07152f"/><stop offset=".55" stop-color="#142953"/><stop offset="1" stop-color="#29113f"/></linearGradient>
+<linearGradient id="gold"><stop stop-color="#ae792b"/><stop offset=".45" stop-color="#ffe6a0"/><stop offset="1" stop-color="#c9933d"/></linearGradient>
+<linearGradient id="ribbon"><stop stop-color="#25dcf5"/><stop offset=".5" stop-color="#9574ff"/><stop offset="1" stop-color="#fa52b4"/></linearGradient>
+<radialGradient id="violet"><stop stop-color="#7532cb" stop-opacity=".6"/><stop offset="1" stop-color="#7532cb" stop-opacity="0"/></radialGradient>
+<clipPath id="canvas"><rect width="1440" height="560" rx="20"/></clipPath>
+</defs>
+<g clip-path="url(#canvas)">
+<rect width="1440" height="560" fill="url(#bg)"/>
+<ellipse cx="1270" cy="100" rx="480" ry="410" fill="url(#violet)"/>
+<circle cx="1380" cy="25" r="225" fill="none" stroke="#a98bff" stroke-opacity=".2" stroke-width="58"/>
+<circle cx="1380" cy="25" r="310" fill="none" stroke="#f8d68b" stroke-opacity=".18"/>
+<rect x="18" y="18" width="1404" height="524" rx="12" fill="none" stroke="url(#gold)" stroke-opacity=".65"/>
+<path d="M0 471 C240 355 360 591 666 456 S1110 357 1440 456" fill="none" stroke="url(#ribbon)" stroke-width="3"/>
+<path d="M0 485 C240 369 360 605 666 470 S1110 371 1440 470" fill="none" stroke="#ed51b0" stroke-opacity=".7" stroke-width="1.5"/>
+<path d="M0 462 C240 346 360 582 666 447 S1110 348 1440 447" fill="none" stroke="#efd08e" stroke-opacity=".4"/>
+<g font-family="'Segoe UI',Tahoma,sans-serif">
+<text x="76" y="184" font-size="100" font-weight="800" letter-spacing="-4" fill="#fff7e4">Jangmao<tspan fill="#ffcf70">70</tspan></text>
+<rect x="80" y="214" width="68" height="4" rx="2" fill="url(#gold)"/>
+<text x="80" y="258" font-size="23" font-weight="700" letter-spacing="2" fill="#c1edff">OFFLINE WORD DOCUMENT AUTOMATION</text>
+<text x="80" y="304" font-size="24" fill="#e3eafb">กรอกข้อมูลให้พร้อม สร้างเอกสาร Word อย่างเป็นระบบ</text>
+<g font-size="16" font-weight="700" text-anchor="middle">
+<rect x="80" y="345" width="145" height="40" rx="20" fill="#41daf1"/><text x="152" y="371" fill="#07152f">WINDOWS</text>
+<rect x="238" y="345" width="155" height="40" rx="20" fill="#ed66b6"/><text x="315" y="371" fill="#24102e">LOCAL DATA</text>
+<rect x="406" y="345" width="192" height="40" rx="20" fill="#f5ce79"/><text x="502" y="371" fill="#251d0e">WORD OUTPUT</text>
+</g>
+<g transform="translate(930 120)">
+<rect width="408" height="248" rx="16" fill="#09172f" stroke="#9781d0"/>
+<path d="M0 46H408" stroke="#443661"/>
+<circle cx="24" cy="24" r="5" fill="#fa66b9"/><circle cx="42" cy="24" r="5" fill="#f5ce79"/><circle cx="60" cy="24" r="5" fill="#41daf1"/>
+<text x="382" y="29" fill="#c3d2eb" font-size="12" text-anchor="end" letter-spacing="2">TWO WORKFLOWS</text>
+<rect x="24" y="70" width="7" height="44" rx="3" fill="#56dec7"/>
+<text x="48" y="96" fill="#b5fff1" font-size="23" font-weight="600">จัดซื้อจัดจ้างและสัญญา</text>
+<rect x="24" y="131" width="7" height="44" rx="3" fill="#7cb8ff"/>
+<text x="48" y="158" fill="#c4dfff" font-size="23" font-weight="600">เบิกเงินเดือน</text>
+<path d="M24 193H384" stroke="#39445d"/>
+<text x="24" y="224" fill="#f5ce79" font-size="17">ข้อมูลในเครื่อง · ผลลัพธ์แยกตามงาน</text>
+</g>
+<text x="80" y="504" fill="#c2cfe5" font-size="15" letter-spacing="3">PREPARE / REVIEW / GENERATE</text>
+<text x="1358" y="504" fill="#f5ce79" font-size="15" text-anchor="end" letter-spacing="2">BY ROBBYGREAN</text>
+</g></g></svg>

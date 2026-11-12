@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="sidecontract-data-flow-title sidecontract-data-flow-desc">
+  <title id="sidecontract-data-flow-title">การเชื่อมโยงข้อมูลภายใน sidecontract</title>
+  <desc id="sidecontract-data-flow-desc">แผนภาพแสดง Shell สอง workflow ข้อมูลร่วม WorkingRecord ระบบบันทึก Template ตัวช่วยโหลดข้ามแท็บ ตัวสร้างเอกสาร Word และ Output ที่แยกตามแท็บ</desc>
+  <defs>
+    <marker id="data-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+    <marker id="data-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+  </defs>
+  <rect width="1200" height="680" fill="#f5f5f5"/>
+
+  <!-- Zones -->
+  <rect x="32" y="80" width="440" height="480" rx="8" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+  <rect x="56" y="84" width="172" height="12" rx="2" fill="#f5f5f5"/>
+  <text x="142" y="93" text-anchor="middle" fill="rgba(45,49,66,0.55)" font-size="8" font-family="'Geist Mono',ui-monospace,monospace" letter-spacing="0.10em">WORKFLOWS · แยกตามแท็บ</text>
+  <rect x="512" y="80" width="656" height="480" rx="8" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+  <rect x="536" y="84" width="248" height="12" rx="2" fill="#f5f5f5"/>
+  <text x="660" y="93" text-anchor="middle" fill="rgba(45,49,66,0.55)" font-size="8" font-family="'Geist Mono',ui-monospace,monospace" letter-spacing="0.10em">SHARED FOUNDATION · ใช้ร่วมเท่าที่จำเป็น</text>
+
+  <!-- Connectors first -->
+  <path d="M560 72 V104 Q560 112 552 112 H260 V180" fill="none" stroke="#4f5d75" stroke-width="1" marker-end="url(#data-arrow)"/>
+  <path d="M640 72 V124 Q640 132 632 132 H504 Q496 132 496 140 V328 Q496 336 488 336 H260 V360" fill="none" stroke="#4f5d75" stroke-width="1" marker-end="url(#data-arrow)"/>
+  <path d="M432 220 H544 Q552 220 552 212 V188 H560" fill="none" stroke="#eb6c36" stroke-width="1.2" marker-end="url(#data-arrow-accent)"/>
+  <path d="M432 400 H544 Q552 400 552 392 V340 H560" fill="none" stroke="#4f5d75" stroke-width="1" marker-end="url(#data-arrow)"/>
+  <line x1="682" y1="228" x2="682" y2="300" stroke="#eb6c36" stroke-width="1.2" marker-end="url(#data-arrow-accent)"/>
+  <line x1="804" y1="188" x2="880" y2="188" stroke="#4f5d75" stroke-width="1" marker-end="url(#data-arrow)"/>
+  <path d="M804 340 H836 Q844 340 844 332 V196 Q844 188 852 188 H880" fill="none" stroke="#4f5d75" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#data-arrow)"/>
+  <rect x="804" y="256" width="80" height="20" rx="2" fill="#f5f5f5"/>
+  <text x="844" y="270" text-anchor="middle" fill="#7a8399" font-size="12" font-family="'Geist','Noto Sans Thai',sans-serif">ข้ามแท็บ</text>
+  <path d="M682 228 V260 Q682 268 690 268 H1004 Q1012 268 1012 276 V300" fill="none" stroke="#4f5d75" stroke-width="1" marker-end="url(#data-arrow)"/>
+  <path d="M972 380 V408 Q972 416 964 416 H690 Q682 416 682 424 V456" fill="none" stroke="#4f5d75" stroke-width="1" marker-end="url(#data-arrow)"/>
+  <line x1="1032" y1="380" x2="1032" y2="456" stroke="#4f5d75" stroke-width="1" marker-end="url(#data-arrow)"/>
+
+  <!-- Shell -->
+  <rect x="432" y="16" width="336" height="56" rx="6" fill="#fff" stroke="#2d3142" stroke-width="1"/>
+  <text x="600" y="40" text-anchor="middle" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist','Noto Sans Thai',sans-serif">sidecontract Shell</text>
+  <text x="600" y="60" text-anchor="middle" fill="#7a8399" font-size="12" font-family="'Geist','Noto Sans Thai',sans-serif">สองแท็บ · close guard · shared record</text>
+
+  <!-- Separate workflows -->
+  <rect x="72" y="180" width="360" height="80" rx="6" fill="#fff" stroke="#2d3142" stroke-width="1"/>
+  <rect x="88" y="196" width="76" height="20" rx="2" fill="rgba(45,49,66,0.08)" stroke="rgba(45,49,66,0.20)" stroke-width="0.8"/>
+  <text x="126" y="210" text-anchor="middle" fill="#4f5d75" font-size="8" font-family="'Geist Mono',ui-monospace,monospace">PROC</text>
+  <text x="252" y="222" text-anchor="middle" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist','Noto Sans Thai',sans-serif">จัดซื้อจัดจ้างฯ</text>
+  <text x="252" y="246" text-anchor="middle" fill="#7a8399" font-size="12" font-family="'Geist','Noto Sans Thai',sans-serif">routing · validation · selected docs</text>
+
+  <rect x="72" y="360" width="360" height="80" rx="6" fill="#fff" stroke="#2d3142" stroke-width="1"/>
+  <rect x="88" y="376" width="76" height="20" rx="2" fill="rgba(45,49,66,0.08)" stroke="rgba(45,49,66,0.20)" stroke-width="0.8"/>
+  <text x="126" y="390" text-anchor="middle" fill="#4f5d75" font-size="8" font-family="'Geist Mono',ui-monospace,monospace">PAY</text>
+  <text x="252" y="402" text-anchor="middle" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist','Noto Sans Thai',sans-serif">เบิกเงินเดือน</text>
+  <text x="252" y="426" text-anchor="middle" fill="#7a8399" font-size="12" font-family="'Geist','Noto Sans Thai',sans-serif">period · validation · selected docs</text>
+
+  <!-- Shared foundation -->
+  <rect x="560" y="148" width="244" height="80" rx="6" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1.2"/>
+  <rect x="576" y="164" width="76" height="20" rx="2" fill="rgba(235,108,54,0.16)" stroke="rgba(235,108,54,0.40)" stroke-width="0.8"/>
+  <text x="614" y="178" text-anchor="middle" fill="#eb6c36" font-size="8" font-family="'Geist Mono',ui-monospace,monospace">SHARED</text>
+  <text x="682" y="190" text-anchor="middle" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist','Noto Sans Thai',sans-serif">ข้อมูลร่วม</text>
+  <text x="682" y="214" text-anchor="middle" fill="#7a8399" font-size="12" font-family="'Geist','Noto Sans Thai',sans-serif">WorkingRecord · fields</text>
+
+  <rect x="560" y="300" width="244" height="80" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+  <rect x="576" y="316" width="76" height="20" rx="2" fill="rgba(45,49,66,0.10)" stroke="rgba(45,49,66,0.24)" stroke-width="0.8"/>
+  <text x="614" y="330" text-anchor="middle" fill="#4f5d75" font-size="8" font-family="'Geist Mono',ui-monospace,monospace">STORE</text>
+  <text x="682" y="342" text-anchor="middle" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist','Noto Sans Thai',sans-serif">Saved Template</text>
+  <text x="682" y="366" text-anchor="middle" fill="#7a8399" font-size="12" font-family="'Geist','Noto Sans Thai',sans-serif">แยกข้อมูลตามแท็บ</text>
+
+  <rect x="880" y="148" width="244" height="80" rx="6" fill="#fff" stroke="#2d3142" stroke-width="1"/>
+  <rect x="896" y="164" width="76" height="20" rx="2" fill="rgba(45,49,66,0.08)" stroke="rgba(45,49,66,0.20)" stroke-width="0.8"/>
+  <text x="934" y="178" text-anchor="middle" fill="#4f5d75" font-size="8" font-family="'Geist Mono',ui-monospace,monospace">TRANSFER</text>
+  <text x="1002" y="190" text-anchor="middle" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist','Noto Sans Thai',sans-serif">โหลด Template</text>
+  <text x="1002" y="214" text-anchor="middle" fill="#7a8399" font-size="12" font-family="'Geist','Noto Sans Thai',sans-serif">เลือก source · รายงานช่องว่าง</text>
+
+  <rect x="880" y="300" width="244" height="80" rx="6" fill="#fff" stroke="#2d3142" stroke-width="1"/>
+  <rect x="896" y="316" width="76" height="20" rx="2" fill="rgba(45,49,66,0.08)" stroke="rgba(45,49,66,0.20)" stroke-width="0.8"/>
+  <text x="934" y="330" text-anchor="middle" fill="#4f5d75" font-size="8" font-family="'Geist Mono',ui-monospace,monospace">RENDER</text>
+  <text x="1002" y="342" text-anchor="middle" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist','Noto Sans Thai',sans-serif">DOCX Renderer</text>
+  <text x="1002" y="366" text-anchor="middle" fill="#7a8399" font-size="12" font-family="'Geist','Noto Sans Thai',sans-serif">Tag mapping · Word output</text>
+
+  <!-- Separate outputs -->
+  <rect x="560" y="456" width="244" height="80" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+  <text x="682" y="488" text-anchor="middle" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist','Noto Sans Thai',sans-serif">Output จัดจ้าง</text>
+  <text x="682" y="512" text-anchor="middle" fill="#7a8399" font-size="12" font-family="'Geist','Noto Sans Thai',sans-serif">เอกสารจัดซื้อจัดจ้าง</text>
+
+  <rect x="880" y="456" width="244" height="80" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+  <text x="1002" y="488" text-anchor="middle" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist','Noto Sans Thai',sans-serif">Output เงินเดือน</text>
+  <text x="1002" y="512" text-anchor="middle" fill="#7a8399" font-size="12" font-family="'Geist','Noto Sans Thai',sans-serif">เอกสารเบิกเงินเดือน</text>
+
+  <line x1="32" y1="600" x2="1168" y2="600" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+  <text x="32" y="624" fill="#4f5d75" font-size="12" font-weight="500" font-family="'Geist','Noto Sans Thai',sans-serif">เส้นทึบ = การส่งต่อข้อมูล · เส้นประ = การโหลดข้ามแท็บ · สีส้ม = แกนข้อมูลร่วม</text>
+</svg>

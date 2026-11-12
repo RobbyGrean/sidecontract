@@ -1,0 +1,9 @@
+# Local build output and visual QA captures
+dist/
+qa/
+
+# Local runtime/debug files
+*.log
+startup-error.txt
+startup-diagnostic-console.txt
+release/

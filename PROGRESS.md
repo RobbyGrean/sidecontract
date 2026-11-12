@@ -17,6 +17,7 @@ Repository: https://github.com/RobbyGrean/sidecontract
 - Set app identity, installer AppId, and install folder to `sidecontract` / `%LOCALAPPDATA%\sidecontract`.
 - Set the app and installer version to `1.0.0`; the public updater manifest points to this repository.
 - Built the Windows executable and installer successfully for the baseline. The baseline artifacts and `update.json` are in `assets/downloads`.
+- Rebuilt `sidecontract.exe` from current `main` on 2026-11-12 with `build-exe-sidecontract.ps1`; the build succeeded. The full installer was not regenerated.
 
 ## Current work in progress
 
@@ -43,6 +44,8 @@ The WIP branch contains a Procurement TOR change:
 - 2026-11-12: Checkpointed the TOR file changes on `codex/procurement-tor-wip`.
 - 2026-11-12: Confirmed the document is intended to be public; the owner plans to replace filled values with `{tag}` placeholders before app integration.
 - 2026-11-12: Audited placeholder rendering; new tags need app-side value mapping, while tags split across Word text runs are supported.
+- 2026-11-12: Rebuilt the executable from current main; compilation succeeded.
+
 
 
 

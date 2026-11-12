@@ -18,7 +18,6 @@ Repository: https://github.com/RobbyGrean/sidecontract
 - Set app identity, installer AppId, and install folder to `sidecontract` / `%LOCALAPPDATA%\sidecontract`.
 - Set the app and installer version to `1.0.0`; the public updater manifest points to this repository.
 - Static identity check on 2026-11-12 confirmed app data, installer ID/path, and updater downloads are scoped to sidecontract.
-- 2026-11-12: Compared committed app identities: Jangmao70 uses `%LOCALAPPDATA%\\Jangmao70`; sidecontract uses `%LOCALAPPDATA%\\sidecontract`, AppId `sidecontract`, and its own GitHub updater URLs. This was a static configuration audit; no installation was run.
 - Built the Windows executable and installer successfully for the baseline. The baseline artifacts and `update.json` are in `assets/downloads`.
 - Rebuilt `sidecontract.exe` from current `main` on 2026-11-12 with `build-exe-sidecontract.ps1`; the build succeeded. The full installer was not regenerated.
 

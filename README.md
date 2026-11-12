@@ -147,9 +147,12 @@ Config/             config ของ workflow และ Template
 Modules/            โมดูลจัดซื้อจัดจ้าง
 Shared/             core, renderer และการโอนข้อมูลระหว่าง Template
 Template/           Template Word ของทั้งสอง workflow
-sidecontract*.cs       source ของตัวโปรแกรมและตัวติดตั้ง
-GUIDE.md            คู่มือฉบับอ่านง่าย
-SITE_CONTENT_BRIEF.md brief เนื้อหาจริงและคำสั่งสำหรับปรับเว็บไซต์
+Sidecontract*.cs              source ของโปรแกรม
+build-*-sidecontract.ps1      สคริปต์ build
+sidecontract-Setup.iss        สคริปต์ตัวติดตั้ง
+GUIDE.md                      คู่มือฉบับอ่านง่าย
+SITE_CONTENT_BRIEF.md         brief เนื้อหาเว็บไซต์
+PROGRESS.md                   สถานะ งานค้าง และวิธีทำต่อจากเครื่องอื่น
 guide.html          คู่มือบนเว็บไซต์
 index.html          เว็บไซต์หลัก
 README.md           หน้าสรุปโครงการ
@@ -170,3 +173,4 @@ README.md           หน้าสรุปโครงการ
 พัฒนาโดย [RobbyGrean](https://github.com/RobbyGrean)
 
 </div>
+

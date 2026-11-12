@@ -27,13 +27,13 @@ The WIP branch contains a Procurement TOR change:
 - The new file is a populated, case-specific document with no app placeholder tokens. Its work type is not in `Config/Procurement/position_catalog.json`.
 - The current app has 15 manifest routes. `ProcurementModule` matches each route by position, teaching flag, and two-school flag; each route also names a TOR/quote pair, hashes, and page counts. The new document cannot replace those existing routes as-is.
 - `template_manifest.json` still references the 13 removed files and their hashes, so the WIP branch is not buildable as-is.
-- The owner confirmed the document is intended to be public and plans to replace its filled values with `{tag}` placeholders later. That conversion is not complete yet.
+- The owner confirmed the document is intended to be public and plans to add `{tag}` placeholders later. TOR document edits are paused for now at the owner's request; no document, manifest, or release changes are underway.
 - The renderer supports `{...}` tokens up to 80 characters and matches them across text runs in a paragraph. Procurement currently has 53 literal tag names plus generated person/committee tags; tokens without a `BuildValues` mapping remain unfilled and require app-side field mapping.
 - Do not build or publish a new installer from this WIP state. The last successful build was the unchanged `main` baseline.
 
 ## Next steps
 
-1. Wait for the owner to finish replacing the case-specific values with `{tag}` placeholders.
+1. Keep TOR changes parked until the owner asks to resume document work.
 2. Reconcile the tagged TOR with the app route model and decide whether the existing 13 route variants remain supported or need an explicit migration.
 3. Rebuild and verify all affected procurement document cases after integration.
 4. Update release artifacts and merge the work into `main` only after it is buildable and verified.
@@ -45,6 +45,8 @@ The WIP branch contains a Procurement TOR change:
 - 2026-11-12: Confirmed the document is intended to be public; the owner plans to replace filled values with `{tag}` placeholders before app integration.
 - 2026-11-12: Audited placeholder rendering; new tags need app-side value mapping, while tags split across Word text runs are supported.
 - 2026-11-12: Rebuilt the executable from current main; compilation succeeded.
+- 2026-11-12: Owner asked to pause TOR document work; no feature coding or document edits were started in this session.
+
 
 
 
